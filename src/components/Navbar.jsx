@@ -28,7 +28,7 @@ export default function Navbar() {
               Servicios
             </Link>
             <Link to="/propiedades" className="text-brand-text hover:text-brand-subtitle font-semibold transition-colors duration-200">
-              Catálogo
+              Propiedades
             </Link>
             <Link to="/contacto" className="text-brand-text hover:text-brand-subtitle font-semibold transition-colors duration-200">
               Contacto
@@ -64,8 +64,11 @@ export default function Navbar() {
             <Link to="/nosotros" onClick={() => setIsOpen(false)} className="block py-2 text-brand-text hover:text-brand-subtitle font-semibold">
               Nosotros
             </Link>
+            <Link to="/Servicios" onClick={() => setIsOpen(false)} className="block py-2 text-brand-text hover:text-brand-subtitle font-semibold">
+              Servicios
+            </Link>
             <Link to="/propiedades" onClick={() => setIsOpen(false)} className="block py-2 text-brand-text hover:text-brand-subtitle font-semibold">
-              Catálogo
+              Propiedades
             </Link>
             <Link to="/contacto" onClick={() => setIsOpen(false)} className="block py-2 text-brand-text hover:text-brand-subtitle font-semibold">
               Contacto

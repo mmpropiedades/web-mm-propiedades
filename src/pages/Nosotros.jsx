@@ -44,19 +44,19 @@ export default function Nosotros() {
           <div>
             <img src="/Images/Mujer 1.jpeg" alt="Lda. Maritza Mite" className="w-full aspect-[4/5] object-cover object-top rounded shadow mb-6" />
             <h3 className="text-2xl font-title text-brand-subtitle font-bold mb-1">Lda. Maritza Mite</h3>
-            <p className="text-gray-800">CEO</p>
+            <p className="text-gray-800"><strong>CEO</strong></p>
           </div>
           {/* Dra. María Isabel */}
           <div>
             <img src="/Images/Mujer 2.jpeg" alt="Dra. María Isabel Mite" className="w-full aspect-[4/5] object-cover rounded shadow mb-6" />
             <h3 className="text-2xl font-title text-brand-subtitle font-bold mb-1">Dra. María Isabel Mite</h3>
-            <p className="text-gray-800">Asesoría Legal</p>
+            <p className="text-gray-800"><strong>Asesoría Legal</strong></p>
           </div>
           {/* Victoria Bustamante */}
           <div>
             <img src="/Images/Mujer 3.jpeg" alt="Victoria Bustamante" className="w-full aspect-[4/5] object-cover object-top rounded shadow mb-6" />
             <h3 className="text-2xl font-title text-brand-subtitle font-bold mb-1">Victoria Bustamante</h3>
-            <p className="text-gray-800">Agente inmobiliaria</p>
+            <p className="text-gray-800"><strong>Agente inmobiliaria</strong></p>
           </div>
         </div>
       </section>

@@ -76,7 +76,7 @@ export default function Inicio() {
         <div className="w-full h-96 bg-gray-200 flex items-center justify-center rounded-lg shadow-inner mb-6">
           <p className="text-gray-500 font-title">Aquí irá el Carrusel (Lógica React pendiente)</p>
         </div>
-        <h3 className="text-2xl font-title text-brand-subtitle font-bold">Propiedades Destacadas</h3>
+        <h3 className="text-3xl font-title font-bold text-brand-title text-center mb-10">Propiedades Destacadas</h3>
       </section>
 
     </div>

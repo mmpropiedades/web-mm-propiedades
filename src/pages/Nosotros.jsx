@@ -70,7 +70,7 @@ export default function Nosotros() {
             <div className="w-48 h-48 rounded-full bg-gradient-to-br from-brand-title to-brand-subtitle flex items-center justify-center shadow-lg mb-8 transform hover:scale-105 transition-transform">
               <span className="text-white text-3xl font-title font-bold">Misión</span>
             </div>
-            <p className="text-brand-subtitle text-justify text-base leading-relaxed px-2">
+            <p className="text-black text-justify text-base leading-relaxed px-2">
               Nuestra misión es transformar la experiencia de compra, venta y alquiler de inmuebles a través de un servicio personalizado basado en la transparencia y el conocimiento profundo del mercado. Nos comprometemos a acompañar a nuestros clientes en cada paso, brindando seguridad técnica y legal para asegurar que cada propiedad se convierta en el hogar o la inversión ideal.
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function Nosotros() {
             <div className="w-48 h-48 rounded-full bg-gradient-to-br from-brand-title to-brand-subtitle flex items-center justify-center shadow-lg mb-8 transform hover:scale-105 transition-transform">
               <span className="text-white text-3xl font-title font-bold">Visión</span>
             </div>
-            <p className="text-brand-subtitle text-justify text-base leading-relaxed px-2">
+            <p className="text-black text-justify text-base leading-relaxed px-2">
               Ser reconocidos como la inmobiliaria líder en confianza y eficiencia, destacando por nuestra capacidad de adaptarnos a las nuevas tendencias del mercado sin perder la esencia del trato humano. Aspiramos a expandir nuestra huella en el sector, siendo el referente de calidad y excelencia operativa para familias e inversionistas.
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function Nosotros() {
             <div className="w-48 h-48 rounded-full bg-gradient-to-br from-brand-title to-brand-subtitle flex items-center justify-center shadow-lg mb-8 transform hover:scale-105 transition-transform">
               <span className="text-white text-3xl font-title font-bold">Valores</span>
             </div>
-            <ul className="text-brand-subtitle text-base space-y-3 w-full pl-8 list-square marker:text-brand-title">
+            <ul className="text-black text-base space-y-3 w-full pl-8 list-square marker:text-brand-title">
               <li> - Experiencia</li>
               <li> - Profesionalismo</li>
               <li> - Honestidad</li>

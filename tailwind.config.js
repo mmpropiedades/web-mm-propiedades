@@ -12,8 +12,8 @@ export default {
       },
       colors: {
         brand: {
-          title: '#00cd9c',    // Verde agua para títulos
-          subtitle: '#218491', // Azul verdoso para subtítulos
+          title: '#218491',    // Verde agua para títulos
+          subtitle: '#00cd9c', // Azul verdoso para subtítulos
           text: '#000000',     // Negro puro para textos
           light: '#F8F9FA'     // Fondo gris muy claro para contraste
         }

@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
 import Inicio from './pages/Inicio';
-import Catalogo from './pages/Catalogo';
+import Propiedades from './pages/Propiedades';
 import Nosotros from './pages/Nosotros';
 import Servicios from './pages/Servicios';
 import Contacto from './pages/Contacto';
@@ -21,7 +21,7 @@ function App() {
             <Route path="/" element={<Inicio />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/servicios" element={<Servicios />} />
-            <Route path="/propiedades" element={<Catalogo />} />
+            <Route path="/propiedades" element={<Propiedades />} />
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
         </main>

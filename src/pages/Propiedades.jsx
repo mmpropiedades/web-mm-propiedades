@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchPropiedades } from '../services/api';
 import Banner from '../components/Banner';
 
-export default function Catalogo() {
+export default function Propiedades() {
   const [propiedades, setPropiedades] = useState([]);
   const [cargando, setCargando] = useState(true);
 

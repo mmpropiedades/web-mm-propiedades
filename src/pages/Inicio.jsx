@@ -5,7 +5,7 @@ export default function Inicio() {
   return (
     <div className="w-full font-body text-brand-text">
       
-    <Banner isHome={true} subtitulo="Calidad y Experiencia" />
+      <Banner isHome={true} subtitulo="Calidad y Experiencia" />
     
       {/* 2. SECCIÓN NOSOTROS */}
       <section className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
@@ -31,25 +31,47 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* 3. CATEGORÍAS */}
-      <section className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
-            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&w=500&q=80" alt="Apartamentos" className="w-full h-64 object-cover mb-4 rounded shadow-sm hover:shadow-md transition-shadow" />
-            <h3 className="text-2xl font-title text-brand-subtitle font-bold">Apartamentos</h3>
+      {/* 3. CATEGORÍAS ACTUALIZADAS (5 categorías) */}
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <h2 className="text-3xl font-title font-bold text-brand-title text-center mb-10">Explora nuestras categorías</h2>
+        
+        {/* Ajustamos el grid a 5 columnas en pantallas grandes (lg:grid-cols-5) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
+          
+          {/* Apartamentos */}
+          <div className="group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&w=500&q=80" alt="Apartamentos" className="w-full h-56 object-cover mb-4 rounded shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1" />
+            <h3 className="text-xl font-title text-brand-subtitle font-bold">Apartamentos</h3>
           </div>
-          <div>
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&w=500&q=80" alt="Casas" className="w-full h-64 object-cover mb-4 rounded shadow-sm hover:shadow-md transition-shadow" />
-            <h3 className="text-2xl font-title text-brand-subtitle font-bold">Casas</h3>
+
+          {/* Casas */}
+          <div className="group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&w=500&q=80" alt="Casas" className="w-full h-56 object-cover mb-4 rounded shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1" />
+            <h3 className="text-xl font-title text-brand-subtitle font-bold">Casas</h3>
           </div>
-          <div>
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&w=500&q=80" alt="Locales" className="w-full h-64 object-cover mb-4 rounded shadow-sm hover:shadow-md transition-shadow" />
-            <h3 className="text-2xl font-title text-brand-subtitle font-bold">Locales</h3>
+
+          {/* Locales */}
+          <div className="group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&w=500&q=80" alt="Locales" className="w-full h-56 object-cover mb-4 rounded shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1" />
+            <h3 className="text-xl font-title text-brand-subtitle font-bold">Locales</h3>
           </div>
+
+          {/* Bodegas (Nueva) */}
+          <div className="group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&w=500&q=80" alt="Bodegas y Galpones" className="w-full h-56 object-cover mb-4 rounded shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1" />
+            <h3 className="text-xl font-title text-brand-subtitle font-bold">Bodegas</h3>
+          </div>
+
+          {/* Proyectos (Nueva) */}
+          <div className="group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1503387762-592dee58c460?ixlib=rb-4.0.3&w=500&q=80" alt="Proyectos Inmobiliarios" className="w-full h-56 object-cover mb-4 rounded shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1" />
+            <h3 className="text-xl font-title text-brand-subtitle font-bold">Proyectos</h3>
+          </div>
+
         </div>
       </section>
 
-      {/* 4. CARRUSEL DESTACADAS (Estructura base) */}
+      {/* 4. CARRUSEL DESTACADAS */}
       <section className="max-w-4xl mx-auto px-4 py-16 flex flex-col items-center">
         <div className="w-full h-96 bg-gray-200 flex items-center justify-center rounded-lg shadow-inner mb-6">
           <p className="text-gray-500 font-title">Aquí irá el Carrusel (Lógica React pendiente)</p>

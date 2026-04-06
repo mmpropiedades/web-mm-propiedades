@@ -1,19 +1,21 @@
 export default function Banner({ titulo, subtitulo, isHome = false }) {
   const bgImage = "/Images/Banner.png";
   
-  // Ajustamos las alturas: más pequeñas en móvil (h-[25vh]) y normales en desktop (md:h-[60vh])
-  const heightClass = isHome 
-    ? "h-[25vh] min-h-[180px] md:h-[60vh] md:min-h-[400px]" 
-    : "h-[20vh] min-h-[150px] md:h-[35vh] md:min-h-[250px]";
+  // Definimos la proporción según el dispositivo:
+  // - Móvil: Proporción más cerrada (aspect-[4/3] o similar)
+  // - Tablet/PC: Proporción panorámica (aspect-video o 21/9)
+  const responsiveAspect = isHome 
+    ? "aspect-[16/9] md:aspect-[21/9] lg:h-[60vh]" 
+    : "aspect-[21/9] md:h-[35vh]";
 
   return (
-    <section className={`relative w-full flex items-center justify-center bg-gray-900 ${heightClass}`}>
+    <section className={`relative w-full overflow-hidden bg-gray-900 ${responsiveAspect}`}>
       <img 
         src={bgImage} 
         alt="Banner Inmobiliaria" 
-        // En móviles usamos 'object-contain' para no cortar el texto
-        // En tablets hacia arriba (md:) usamos 'object-cover' para estética
-        className="absolute inset-0 w-full h-full object-contain md:object-cover opacity-100"
+        // Usamos object-contain en pantallas muy críticas y cover en las demás
+        // pero con el aspect-ratio ya no se debería cortar casi nada.
+        className="absolute inset-0 w-full h-full object-cover md:object-center opacity-100"
       />
     </section>
   );

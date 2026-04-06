@@ -111,7 +111,7 @@ export default function Inicio() {
                 {/* Info Overlay */}
                 <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
                   <h4 className="text-2xl font-bold font-title">{prop.TITULO}</h4>
-                  <p className="text-lg">{prop.UBICACIÓN} — <span className="font-bold text-blue-400">${prop.PRECIO}</span></p>
+                  <p className="text-lg">{prop.UBICACIÓN} </p>
                 </div>
               </div>
             ))

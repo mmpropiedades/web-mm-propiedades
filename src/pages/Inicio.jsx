@@ -1,25 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
-import { fetchPropiedades } from '../services/api'; // Importamos tu servicio
+import { fetchPropiedades } from '../services/api';
 
 export default function Inicio() {
   const [propiedades, setPropiedades] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  // 1. Cargar los datos de la API
   useEffect(() => {
     const loadData = async () => {
+      // 1. Intentar cargar desde Caché para velocidad instantánea
+      const cache = localStorage.getItem('mm_propiedades_destacadas');
+      if (cache) {
+        setPropiedades(JSON.parse(cache));
+        setLoading(false);
+      }
+
+      // 2. Traer datos frescos de la API
       const data = await fetchPropiedades();
-      // Tomamos las últimas 5 o las que consideres "Destacadas"
-      setPropiedades(data.slice(0, 5));
+      const destacadas = data.slice(0, 5);
+      
+      if (destacadas.length > 0) {
+        setPropiedades(destacadas);
+        localStorage.setItem('mm_propiedades_destacadas', JSON.stringify(destacadas));
+      }
       setLoading(false);
     };
     loadData();
   }, []);
 
-  // 2. Lógica de rotación automática (cada 5 segundos)
   useEffect(() => {
     if (propiedades.length > 0) {
       const timer = setInterval(() => {
@@ -63,7 +73,6 @@ export default function Inicio() {
       <section className="max-w-7xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-title font-bold text-brand-title text-center mb-10">Explora nuestras categorías</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-          {/* ... (Tus categorías se mantienen igual) ... */}
           <div className="group cursor-pointer">
             <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&w=500&q=80" alt="Apartamentos" className="w-full h-56 object-cover mb-4 rounded shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1" />
             <h3 className="text-xl font-title text-brand-subtitle font-bold">Apartamentos</h3>
@@ -87,13 +96,13 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* 4. CARRUSEL DESTACADAS (LOGICA APLICADA) */}
+      {/* 4. CARRUSEL DESTACADAS */}
       <section className="max-w-4xl mx-auto px-4 py-16 flex flex-col items-center">
         <div className="relative w-full h-96 bg-gray-200 overflow-hidden rounded-lg shadow-lg mb-6">
           
-          {loading ? (
-            <div className="flex items-center justify-center h-full">
-               <p className="text-gray-500 font-title animate-pulse">Cargando propiedades...</p>
+          {loading && propiedades.length === 0 ? (
+            <div className="flex items-center justify-center h-full bg-gray-200 animate-pulse">
+               <p className="text-gray-400 font-title italic">Sincronizando catálogo...</p>
             </div>
           ) : propiedades.length > 0 ? (
             propiedades.map((prop, index) => (
@@ -106,9 +115,9 @@ export default function Inicio() {
                 <img 
                   src={prop.IMAGEN_PRINCIPAL} 
                   alt={prop.TITULO} 
+                  loading="eager"
                   className="w-full h-full object-cover" 
                 />
-                {/* Info Overlay */}
                 <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
                   <h4 className="text-2xl font-bold font-title">{prop.TITULO}</h4>
                   <p className="text-lg">{prop.UBICACIÓN} </p>

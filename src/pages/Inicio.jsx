@@ -64,7 +64,7 @@ export default function Inicio() {
 
           {/* Proyectos (Nueva) */}
           <div className="group cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1503387762-592dee58c460?ixlib=rb-4.0.3&w=500&q=80" alt="Proyectos Inmobiliarios" className="w-full h-56 object-cover mb-4 rounded shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1" />
+            <img src="https://inmobiliariasencolombia.com/wp-content/uploads/2023/08/proyectos-inmobiliarios-b-ID-01.webp" alt="Proyectos Inmobiliarios" className="w-full h-56 object-cover mb-4 rounded shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1" />
             <h3 className="text-xl font-title text-brand-subtitle font-bold">Proyectos</h3>
           </div>
 

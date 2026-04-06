@@ -24,7 +24,7 @@ export default function Navbar() {
             <Link to="/nosotros" className="text-brand-text hover:text-brand-subtitle font-semibold transition-colors duration-200">
               Nosotros
             </Link>
-            <Link to="/Servicios" className="text-brand-text hover:text-brand-subtitle font-semibold transition-colors duration-200">
+            <Link to="/servicios" className="text-brand-text hover:text-brand-subtitle font-semibold transition-colors duration-200">
               Servicios
             </Link>
             <Link to="/propiedades" className="text-brand-text hover:text-brand-subtitle font-semibold transition-colors duration-200">

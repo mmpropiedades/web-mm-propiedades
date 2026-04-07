@@ -55,10 +55,10 @@ export default function Inicio() {
           />
         </div>
         <div>
-          <h2 className="text-4xl text-justify font-bold font-title text-brand-title leading-tight mb-6">
+          <h2 className="text-2xl text-justify font-bold font-title text-brand-title leading-tight mb-6">
             Expertos en convertir tus planes inmobiliarios en realidad
           </h2>
-          <p className="text-gray-700 text-justify mb-4 text-lg">
+          <p className="text-gray-700 text-justify mb-4 text-md">
             Sabemos que moverte de casa o invertir en un local es un paso importante. En <strong className="text-black">MM Propiedades</strong>, te ofrecemos la seguridad y el conocimiento del mercado local que necesitas para tomar la mejor decisión.
           </p>
           <ul className="list-disc pl-5 text-justify space-y-2 text-gray-700">
@@ -97,7 +97,7 @@ export default function Inicio() {
       </section>
 
       {/* 4. CARRUSEL DESTACADAS */}
-      <section className="max-w-4xl mx-auto px-4 py-16 flex flex-col items-center">
+      <section className="max-w-3xl mx-auto px-4 py-16 flex flex-col items-center">
         <div className="relative w-full h-96 bg-gray-200 overflow-hidden rounded-lg shadow-lg mb-6">
           
           {loading && propiedades.length === 0 ? (

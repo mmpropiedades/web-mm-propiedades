@@ -43,7 +43,7 @@ export default function Servicios() {
 
       <section className="max-w-6xl mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-title text-brand-title mb-4">
+          <h2 className="text-3xl md:text-3xl font-bold font-title text-brand-title mb-4">
             Tu aliado integral en el mercado inmobiliario
           </h2>
           <p className="max-w-3xl mx-auto text-gray-600">

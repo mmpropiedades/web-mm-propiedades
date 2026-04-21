@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchPropiedades } from '../services/api';
-import Banner from '../components/Banner';
+import HomeSlider from '../components/HomeSlider'; 
 
 export default function Propiedades() {
   const [propiedades, setPropiedades] = useState([]);
@@ -42,7 +42,7 @@ export default function Propiedades() {
   return (
     <div className="w-full font-body text-brand-text">
       
-      <Banner titulo="Catálogo" subtitulo="Encuentra tu propiedad ideal" />
+      <HomeSlider titulo="Catálogo" subtitulo="Encuentra tu propiedad ideal" />
 
       <div className="max-w-6xl mx-auto p-4 py-12"> 
         <h2 className="text-3xl font-bold font-title text-brand-title mb-10 text-center">

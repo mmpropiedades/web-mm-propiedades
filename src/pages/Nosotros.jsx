@@ -1,9 +1,9 @@
-import Banner from '../components/Banner';
+import HomeSlider from '../components/HomeSlider'; 
 
 export default function Nosotros() {
   return (
     <div className="w-full font-body text-brand-text">
-        <Banner titulo="Nosotros" subtitulo="Conoce a nuestro equipo" />
+        <HomeSlider titulo="Nosotros" subtitulo="Conoce a nuestro equipo" />
       
       {/* 1. SECCIÓN INTRODUCCIÓN */}
       <section className="max-w-6xl mx-auto px-4 py-16">

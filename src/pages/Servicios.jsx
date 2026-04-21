@@ -1,4 +1,4 @@
-import Banner from '../components/Banner';
+import HomeSlider from '../components/HomeSlider'; 
 import { useNavigate } from 'react-router-dom';
 
 export default function Servicios() {
@@ -39,7 +39,7 @@ export default function Servicios() {
 
   return (
     <div className="w-full font-body text-brand-text">
-      <Banner titulo="Servicios" subtitulo="Soluciones para Propietarios e Inquilinos" />
+      <HomeSlider titulo="Servicios" subtitulo="Soluciones para Propietarios e Inquilinos" />
 
       <section className="max-w-6xl mx-auto px-4 py-16">
         <div className="text-center mb-16">

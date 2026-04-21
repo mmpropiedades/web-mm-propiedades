@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Banner from '../components/Banner';
+import HomeSlider from '../components/HomeSlider'; 
 
 export default function Contacto() {
   const location = useLocation();
@@ -46,7 +46,7 @@ export default function Contacto() {
 
   return (
     <div className="w-full font-body text-brand-text">
-      <Banner titulo="Contacto" subtitulo="Estamos para asesorarte" />
+      <HomeSlider titulo="Contacto" subtitulo="Estamos para asesorarte" />
 
       <section className="max-w-4xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12">

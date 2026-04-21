@@ -9,10 +9,18 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           
-          {/* Logo / Nombre de la Marca */}
+          {/* Logo de la Marca (Aumentado un 15%) */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="font-title text-2xl md:text-3xl font-bold text-brand-title hover:text-brand-subtitle transition-colors duration-300">
-              MM Propiedades
+            <Link to="/" className="transition-transform duration-300 hover:scale-105">
+              <img 
+                src="/Images/logo.jpeg" 
+                alt="MM Propiedades" 
+                /* AJUSTE DE TAMAÑO (+15%): 
+                   - h-14 (56px) en lugar de h-12
+                   - md:h-16 (64px) en lugar de h-14
+                */
+                className="h-14 md:h-16 w-auto object-contain" 
+              />
             </Link>
           </div>
 
@@ -33,7 +41,6 @@ export default function Navbar() {
             <Link to="/contacto" className="text-brand-text hover:text-brand-subtitle font-semibold transition-colors duration-200">
               Contacto
             </Link>
-            
           </div>
 
           {/* Botón de Menú Móvil (Hamburguesa) */}
@@ -56,7 +63,7 @@ export default function Navbar() {
 
       {/* Menú Desplegable Móvil */}
       {isOpen && (
-        <div className="md:hidden bg-brand-light border-t border-gray-200">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 pt-2 pb-4 space-y-2">
             <Link to="/" onClick={() => setIsOpen(false)} className="block py-2 text-brand-text hover:text-brand-subtitle font-semibold">
               Inicio

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Banner from '../components/Banner';
+import HomeSlider from '../components/HomeSlider'; 
 import { fetchPropiedades } from '../services/api';
 
 export default function Inicio() {
@@ -8,16 +8,17 @@ export default function Inicio() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
+  // 1. Cargar los datos de la API
   useEffect(() => {
     const loadData = async () => {
-      // 1. Intentar cargar desde Caché para velocidad instantánea
+      // Intentar cargar desde Caché para velocidad instantánea
       const cache = localStorage.getItem('mm_propiedades_destacadas');
       if (cache) {
         setPropiedades(JSON.parse(cache));
         setLoading(false);
       }
 
-      // 2. Traer datos frescos de la API
+      // Traer datos frescos de la API
       const data = await fetchPropiedades();
       const destacadas = data.slice(0, 5);
       
@@ -30,6 +31,7 @@ export default function Inicio() {
     loadData();
   }, []);
 
+  // 2. Lógica de rotación automática para el Carrusel de Destacadas
   useEffect(() => {
     if (propiedades.length > 0) {
       const timer = setInterval(() => {
@@ -42,8 +44,8 @@ export default function Inicio() {
   return (
     <div className="w-full font-body text-brand-text">
       
-      {/* 1. BANNER (INTACTO) */}
-      <Banner isHome={true} subtitulo="Calidad y Experiencia" />
+      {/* 1. SLIDER PRINCIPAL (Sustituye al antiguo Banner) */}
+      <HomeSlider />
     
       {/* 2. SECCIÓN NOSOTROS */}
       <section className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
@@ -96,7 +98,7 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* 4. CARRUSEL DESTACADAS */}
+      {/* 4. CARRUSEL DESTACADAS (Alimentado por Firebase/Sheets) */}
       <section className="max-w-3xl mx-auto px-4 py-16 flex flex-col items-center">
         <div className="relative w-full h-96 bg-gray-200 overflow-hidden rounded-lg shadow-lg mb-6">
           
